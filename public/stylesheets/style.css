@@ -1,8 +1,74 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/NunitoSans-Italic-VariableFont_YTLC\,opsz\,wdth\,wght.ttf");
 }
 
-a {
-  color: #00B7FF;
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: "Lato-Thin";
+  src: url("../fonts/Lato-Light.ttf");
+}
+
+body{
+  background-color: #B98EA7;
+  padding: 0 60px;
+}
+
+h1{
+  color: #120D31;
+  font-family: "Nunito", sans-serif;
+  font-size: 48px;
+}
+
+h2{
+  font-size: 32px;
+  font-family: "Nunito", sans-serif;
+}
+
+.sign-up{
+  background-color: #F0D3F7;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form{
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px
+}
+input{
+  height: 32px;
+  font-size: 24px;
+  margin-left: 24px;
+}
+
+label{
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+}
+
+
+button{
+  background-color: #120D31;
+  color: white;
+  margin-top: 24px;
+  padding: 12px 24px;
+  outline: none;
+  border-radius: 12px;
+  border: none;
+  font-size: 20px;
+  font-family: "Lato-Thin", sans-serif;
+  cursor: pointer;
+  transition: 0.2s ease-in all;
+}
+
+button:hover{
+  background-color: #34239c;
 }
