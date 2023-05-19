@@ -67,18 +67,18 @@ app.use(session({ secret: "cats", resave: false, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Set locals.user
+app.use((req, res, next) => {
+  res.locals.currentUser = req.user;
+  next();
+});
+
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));
-});
-
-// Set locals.user
-app.use((req, res, next) => {
-  res.locals.currentUser = req.user;
-  next();
 });
 
 // error handler

@@ -26,7 +26,7 @@ router.get("/login", (req, res, next) => {
 router.post("/login", loginController.login_post);
 
 router.get("/dashboard", (req, res, next) => {
-  res.send("logged in");
+  res.render("dashboard", { title: "Home" });
 });
 
 module.exports = router;
