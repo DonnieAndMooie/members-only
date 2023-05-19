@@ -34,12 +34,14 @@ h2{
   font-family: "Nunito", sans-serif;
 }
 
-.sign-up h2{
+.sign-up h2,
+.login h2{
   margin-bottom: 20px;
 }
 
 .sign-up,
-.join{
+.join,
+.login{
   background-color: #F0D3F7;
   padding: 20px;
   border-radius: 5px;
@@ -64,6 +66,15 @@ label{
   font-family: "Lato", sans-serif;
 }
 
+.error{
+  color: red;
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+}
+
+.errors{
+  margin-bottom: 20px;
+}
 
 button{
   background-color: #120D31;
@@ -127,4 +138,22 @@ button:hover{
   cursor: pointer;
   transform: translate(900px, -300px);
   transition: 0.4s ease-in all;
+}
+
+.login p{
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+  margin-top: 20px;
+}
+
+a{
+  color: #120D31;
+}
+
+a:visited{
+  color: #120D31;
+}
+
+a:hover{
+  color: #34239c;
 }
