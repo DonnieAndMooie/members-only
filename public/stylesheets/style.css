@@ -13,15 +13,20 @@
   src: url("../fonts/Lato-Light.ttf");
 }
 
+*{
+  margin: 0;
+}
+
 body{
   background-color: #B98EA7;
-  padding: 0 60px;
+  padding: 60px;
 }
 
 h1{
   color: #120D31;
   font-family: "Nunito", sans-serif;
   font-size: 48px;
+  margin-bottom: 20px;
 }
 
 h2{
@@ -29,7 +34,12 @@ h2{
   font-family: "Nunito", sans-serif;
 }
 
-.sign-up{
+.sign-up h2{
+  margin-bottom: 20px;
+}
+
+.sign-up,
+.join{
   background-color: #F0D3F7;
   padding: 20px;
   border-radius: 5px;
@@ -71,4 +81,50 @@ button{
 
 button:hover{
   background-color: #34239c;
+}
+
+.join p{
+  font-family: "Lato-Thin";
+  font-size: 20px;
+}
+
+.join h2{
+  margin-bottom: 8px;
+}
+
+.enter-secret{
+  margin-top: 20px;
+}
+
+.join input{
+  margin-top: 18px;
+}
+
+.join-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.secret{
+  border: 5px solid black;
+  background-color: white;
+  font-size: 24px;
+  font-family: "Nunito", sans-serif;
+  max-width: 300px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.secret-container{
+  transform: translate(-350px, 420px);
+  cursor: pointer;
+}
+
+.secret-container:hover .secret{
+  cursor: pointer;
+  transform: translate(900px, -300px);
+  transition: 0.4s ease-in all;
 }
