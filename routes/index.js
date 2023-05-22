@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 const signUpController = require("../controllers/signUpController");
 const loginController = require("../controllers/loginController");
+const messageController = require("../controllers/messageController");
 
 /* GET home page. */
 router.get("/", (req, res, next) => {
@@ -34,5 +35,7 @@ router.post("/join", loginController.join_post);
 router.get("/new-message", (req, res, next) => {
   res.render("message-form", { title: "New Message" });
 });
+
+router.post("/new-message", messageController.new_message_post);
 
 module.exports = router;
