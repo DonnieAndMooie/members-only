@@ -42,13 +42,18 @@ h2{
 .sign-up,
 .join,
 .login,
-.message-form{
+.message-form,
+.messages{
   background-color: #F0D3F7;
   padding: 20px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.messages{
+  align-items: flex-start;
 }
 
 form{
@@ -180,4 +185,30 @@ a:hover{
 
 .hide{
   display: none;
+}
+
+.messages{
+  margin-top: 20px;
+}
+
+.message{
+  border-bottom: 3px solid #34239c;
+  width: 100%;
+  padding: 12px 0;
+  color: #120D31;
+}
+
+.message p{
+  font-family: "Lato-Thin";
+  font-size: 24px;
+}
+
+.message .header{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.message h2{
+  margin-right: auto;
 }

@@ -26,9 +26,7 @@ router.get("/login", (req, res, next) => {
 
 router.post("/login", loginController.login_post);
 
-router.get("/dashboard", (req, res, next) => {
-  res.render("dashboard", { title: "Home" });
-});
+router.get("/dashboard", messageController.dashboard_get);
 
 router.post("/join", loginController.join_post);
 

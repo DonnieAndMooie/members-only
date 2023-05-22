@@ -1,5 +1,6 @@
 const { body, validationResult } = require("express-validator");
 const Message = require("../models/MessageSchema");
+const User = require("../models/UserSchema");
 
 exports.new_message_post = [
   body("title")
@@ -31,3 +32,9 @@ exports.new_message_post = [
     }
   },
 ];
+
+exports.dashboard_get = async (req, res, next) => {
+  const messages = await Message.find({}).populate("author");
+  console.log(messages);
+  res.render("dashboard", { title: "Home", messages });
+};

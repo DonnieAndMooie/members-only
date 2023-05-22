@@ -12,7 +12,17 @@
             <button class="<%=currentUser.member ? 'hide' : 'join-button'%>" onclick="location.href='/join'">Join The Club!</button>
         </div>
         <div class="messages">
-          
+          <% for (const message of messages){%>
+            <div class="message">
+              <div class="header">
+                <h2><%=message.title%></h2>
+                <p class="<%=locals.currentUser.member ? '' : 'hide'%>"><em><%=message.author.full_name%></em></p>
+                <p class="<%=locals.currentUser.member ? '' : 'hide'%>"><em><%=message.date_formatted%></em></p>
+                <p class="<%=locals.currentUser.member ? 'hide' : ''%>"><em>?????</em></p>
+              </div>
+              <p><%=message.content%></p>
+            </div>
+            <%}%>
         </div>
   </body>
 </html>

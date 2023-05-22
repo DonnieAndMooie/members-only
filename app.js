@@ -73,6 +73,14 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((req, res, next) => {
+  if (req.session.user === null) {
+    res.redirect("/login");
+  } else {
+    next();
+  }
+});
+
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
