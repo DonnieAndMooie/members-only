@@ -8,8 +8,8 @@
         <h1>MembersOnly</h1>
         <div class="welcome">
             <h2>Hi <%=locals.currentUser.first_name%> <%=locals.currentUser.last_name%>!</h2>
-            <button class="send-message">Send Message</button>
-            <button class="join-button" onclick="location.href='/join'">Join The Club!</button>
+            <button class="send-message" onclick="location.href='/new-message'">Send Message</button>
+            <button class="<%=currentUser.member ? 'hide' : 'join-button'%>" onclick="location.href='/join'">Join The Club!</button>
         </div>
         <div class="messages">
           

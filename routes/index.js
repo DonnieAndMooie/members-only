@@ -29,4 +29,10 @@ router.get("/dashboard", (req, res, next) => {
   res.render("dashboard", { title: "Home" });
 });
 
+router.post("/join", loginController.join_post);
+
+router.get("/new-message", (req, res, next) => {
+  res.render("message-form", { title: "New Message" });
+});
+
 module.exports = router;

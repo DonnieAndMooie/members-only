@@ -41,7 +41,8 @@ h2{
 
 .sign-up,
 .join,
-.login{
+.login,
+.message-form{
   background-color: #F0D3F7;
   padding: 20px;
   border-radius: 5px;
@@ -59,6 +60,11 @@ input{
   height: 32px;
   font-size: 24px;
   margin-left: 24px;
+}
+
+textarea{
+  font-size: 24px;
+  font-family: sans-serif;
 }
 
 label{
@@ -136,7 +142,7 @@ button:hover{
 
 .secret-container:hover .secret{
   cursor: pointer;
-  transform: translate(900px, -300px);
+  transform: translate(57vw, -40vh);
   transition: 0.4s ease-in all;
 }
 
@@ -170,4 +176,8 @@ a:hover{
 .send-message{
   margin-left: auto;
   margin-right: 20px;
+}
+
+.hide{
+  display: none;
 }
