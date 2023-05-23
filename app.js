@@ -76,7 +76,7 @@ app.use((req, res, next) => {
 });
 
 app.use((req, res, next) => {
-  if (req.user === undefined && req.originalUrl !== "/login") {
+  if (req.user === undefined && req.originalUrl !== "/login" && req.originalUrl !== "/sign-up") {
     res.redirect("/login");
   }
   next();
