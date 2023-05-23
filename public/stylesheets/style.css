@@ -43,13 +43,19 @@ h2{
 .join,
 .login,
 .message-form,
-.messages{
+.messages,
+.admin,
+.confirm-delete{
   background-color: #F0D3F7;
   padding: 20px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.confirm-delete{
+  margin-top: 20px;
 }
 
 .messages{
@@ -98,19 +104,21 @@ button{
   font-size: 20px;
   font-family: "Lato-Thin", sans-serif;
   cursor: pointer;
-  transition: 0.2s ease-in all;
+  transition: 0.2s ease-in background-color;
 }
 
 button:hover{
   background-color: #34239c;
 }
 
-.join p{
+.join p,
+.admin p{
   font-family: "Lato-Thin";
   font-size: 20px;
 }
 
-.join h2{
+.join h2,
+.admin h2{
   margin-bottom: 8px;
 }
 
@@ -118,11 +126,13 @@ button:hover{
   margin-top: 20px;
 }
 
-.join input{
+.join input,
+.admin input{
   margin-top: 18px;
 }
 
-.join-form{
+.join-form,
+.admin-form{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,6 +182,7 @@ a:hover{
 .welcome{
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
 .welcome button{
@@ -180,7 +191,6 @@ a:hover{
 
 .send-message{
   margin-left: auto;
-  margin-right: 20px;
 }
 
 .hide{
@@ -211,4 +221,14 @@ a:hover{
 
 .message h2{
   margin-right: auto;
+}
+
+.bin{
+  cursor: pointer;
+  height: 22px;
+}
+
+.confirm,
+.cancel{
+  width: 180px;
 }

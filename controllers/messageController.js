@@ -1,5 +1,6 @@
 const { body, validationResult } = require("express-validator");
 const Message = require("../models/MessageSchema");
+const { findByIdAndDelete } = require("../models/UserSchema");
 const User = require("../models/UserSchema");
 
 exports.new_message_post = [
@@ -36,4 +37,9 @@ exports.new_message_post = [
 exports.dashboard_get = async (req, res, next) => {
   const messages = await Message.find({}).populate("author").sort({ timestamp: -1 });
   res.render("dashboard", { title: "Home", messages });
+};
+
+exports.delete_post = async (req, res, next) => {
+  await Message.findByIdAndDelete(req.params.id);
+  res.redirect("/dashboard");
 };

@@ -36,4 +36,16 @@ router.get("/new-message", (req, res, next) => {
 
 router.post("/new-message", messageController.new_message_post);
 
+router.get("/admin", (req, res, next) => {
+  res.render("admin");
+});
+
+router.post("/admin", loginController.admin_post);
+
+router.get("/:id/delete", (req, res, next) => {
+  res.render("delete");
+});
+
+router.post("/:id/delete", messageController.delete_post);
+
 module.exports = router;
