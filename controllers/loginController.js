@@ -26,7 +26,7 @@ exports.join_post = async function (req, res, next) {
     await User.findByIdAndUpdate(res.locals.currentUser._id, { member: true });
     res.redirect("/dashboard");
   } else {
-    res.redirect("/join");
+    res.render("join", { error: "Incorrect Password" });
   }
 };
 
@@ -35,6 +35,6 @@ exports.admin_post = async function (req, res, next) {
     await User.findByIdAndUpdate(res.locals.currentUser._id, { admin: true });
     res.redirect("/dashboard");
   } else {
-    res.redirect("/admin");
+    res.render("admin", { error: "Incorrect Password" });
   }
 };
