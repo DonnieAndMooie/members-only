@@ -34,7 +34,6 @@ exports.new_message_post = [
 ];
 
 exports.dashboard_get = async (req, res, next) => {
-  const messages = await Message.find({}).populate("author");
-  console.log(messages);
+  const messages = await Message.find({}).populate("author").sort({ timestamp: -1 });
   res.render("dashboard", { title: "Home", messages });
 };
